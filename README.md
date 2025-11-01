@@ -1,6 +1,6 @@
 # node-connectivity-monitor
 
-Systemd circuit-breaker service that monitors for node connectivity and triggers a specified action when connectivity is lost or restored.
+Systemd circuit-breaker service that monitors for node connectivity and triggers a specified action when connectivity is lost.
 
 ## Usage
 
