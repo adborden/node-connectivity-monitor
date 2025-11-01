@@ -40,3 +40,8 @@ The timer runs every minute by default. You can change this by creating a drop-i
 [Timer]
 OnUnitActiveSec=10 # Test every 10 seconds
 ```
+
+### OnFailure action
+
+> ![important]
+> By default, the OnFailure action is `systemd-reboot.service`, which will clear the state of the circuit breaker. If you use an alternative action, ensure the state is cleared. The script assumes the failed state is terminal and **will not** transition back to a healthy (closed circuit) after hitting FAILURE_THRESHOLD. You must clear the state with `network-connectivity-monitor.sh reset`.
