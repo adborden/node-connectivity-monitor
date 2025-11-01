@@ -1,0 +1,10 @@
+[Unit]
+Description=Network Connectivity Monitor
+OnFailure=systemd-reboot.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/network-connectivity-monitor.sh 8.8.8.8
+
+[Install]
+WantedBy=multi-user.target
